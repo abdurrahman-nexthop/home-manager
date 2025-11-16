@@ -13,7 +13,6 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    openssh_gssapi
     mosh
     nixfmt
     jq
@@ -39,7 +38,6 @@
     ./git.nix
     ./helix.nix
     ./nixvim.nix
-    ./ssh.nix
   ];
 
   programs = {
