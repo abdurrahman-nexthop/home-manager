@@ -96,6 +96,7 @@
           codelldb_path = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
         };
       };
+      lsp.servers.clangd.packageFallback = true;
       neotest = {
         enable = true;
         adapters = {
