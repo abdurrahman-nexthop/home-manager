@@ -64,6 +64,10 @@
     opts = {
       list = lib.mkForce false;
       colorcolumn = lib.mkForce "";
+      tabstop = lib.mkForce 8;
+      softtabstop = lib.mkForce 8;
+      showtabline = lib.mkForce 8;
+      shiftwidth = lib.mkForce 8;
       guicursor = lib.mkForce [
         "n-v-c:block" # Normal, Visual and Command mode
         "i-ci-ve:ver25" # Insert, Command-line Insert and Visual-exclude mode
