@@ -16,6 +16,7 @@
     mosh
     nixfmt
     jq
+    awscli2
     inputs.nix-auth.packages.${system}.default
   ];
 
