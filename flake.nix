@@ -13,7 +13,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim-config.url = "github:abuibrahim/nixvim";
+    nixvim-config = {
+      url = "github:abuibrahim/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -30,7 +33,14 @@
     {
       homeConfigurations."${user.name}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit pkgs user system inputs; };
+        extraSpecialArgs = {
+          inherit
+            pkgs
+            user
+            system
+            inputs
+            ;
+        };
         modules = [
           ./home.nix
           inputs.catppuccin.homeModules.catppuccin
