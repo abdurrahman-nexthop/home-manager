@@ -12,6 +12,7 @@
       user.name = "${user.description}";
       user.email = "${user.email}";
       init.defaultBranch = "main";
+      sendemail.confirm = "auto";
       credential = builtins.listToAttrs (
         map (
           host:
