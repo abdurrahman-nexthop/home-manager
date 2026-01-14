@@ -36,6 +36,7 @@
 
   imports = [
     ./tmux.nix
+    ./email.nix
     ./git.nix
     ./helix.nix
     ./nixvim.nix
